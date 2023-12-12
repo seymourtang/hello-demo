@@ -2,7 +2,6 @@ package main
 
 import (
 	"log"
-	"log/slog"
 	"net/http"
 )
 
@@ -14,6 +13,6 @@ func main() {
 	http.HandleFunc("/hello", func(writer http.ResponseWriter, request *http.Request) {
 		_, _ = writer.Write([]byte("world"))
 	})
-	slog.Info("http server is starting", "port", 8081)
+	log.Printf("http server is starting,port:%d", 8081)
 	log.Fatal(http.ListenAndServe(":8081", nil))
 }
