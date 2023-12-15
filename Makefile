@@ -3,3 +3,6 @@ build:
 
 container:
 	@docker build -f ./Dockerfile -t seymourtang/hello-world:test .
+
+test:
+	@go test -v -cover $(go list ./...)

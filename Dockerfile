@@ -1,4 +1,4 @@
-FROM golang:1.20-alpine as builder
+FROM registry.cn-shanghai.aliyuncs.com/txm-graduation/golang:1.20-alpine as builder
 
 WORKDIR /go/src/workspace
 
